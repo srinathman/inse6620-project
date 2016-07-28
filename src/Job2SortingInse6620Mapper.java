@@ -7,7 +7,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Counter;
 import org.apache.hadoop.mapreduce.Mapper;
 
-public class Job2Inse6620Mapper extends Mapper<Object, Text, IntWritable, Text> {
+public class Job2SortingInse6620Mapper extends Mapper<Object, Text, IntWritable, Text> {
 
 	private IntWritable thisKey = new IntWritable();
 

@@ -4,7 +4,7 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
-public class Job1Inse6620Reducer extends
+public class Job1ParseCountInse6620Reducer extends
 		Reducer<Text, IntWritable, Text, IntWritable> {
 
 	private IntWritable result = new IntWritable();

@@ -7,7 +7,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Counter;
 import org.apache.hadoop.mapreduce.Mapper;
 
-public class Job1Inse6620Mapper extends Mapper<Object, Text, Text, IntWritable> {
+public class Job1ParseCountInse6620Mapper extends Mapper<Object, Text, Text, IntWritable> {
 
 	private final static IntWritable one = new IntWritable(1);
     private Text thisKey = new Text();

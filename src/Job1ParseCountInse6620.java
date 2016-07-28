@@ -7,7 +7,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
 
-public class Job1Inse6620 {
+public class Job1ParseCountInse6620 {
 
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
@@ -19,10 +19,10 @@ public class Job1Inse6620 {
 		}
 		
 		Job job = Job.getInstance( conf, "INSE 6620 Job #1" ) ;
-		job.setJarByClass( Job1Inse6620.class) ;
-		job.setMapperClass( Job1Inse6620Mapper.class) ;
+		job.setJarByClass( Job1ParseCountInse6620.class) ;
+		job.setMapperClass( Job1ParseCountInse6620Mapper.class) ;
 		//job.setCombinerClass( Inse6620Combinerclass) ;
-		job.setReducerClass( Job1Inse6620Reducer.class);
+		job.setReducerClass( Job1ParseCountInse6620Reducer.class);
 				
 		job.setOutputKeyClass( Text.class );
 		job.setOutputValueClass(IntWritable.class);

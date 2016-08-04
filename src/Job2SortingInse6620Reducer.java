@@ -5,11 +5,12 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
 public class Job2SortingInse6620Reducer extends
-		Reducer<IntWritable, Text, IntWritable, Text> {
+		Reducer<IntWritable, Text, Text, IntWritable> {
 
-	//private IntWritable result = new IntWritable();
+    // Accumulator
+	private IntWritable result = new IntWritable();
 
-	public void reduce(IntWritable key, Text value, Context context)
+	public void reduce(IntWritable key, Iterable<Text> values, Context context)
 			throws IOException, InterruptedException {
 
 		// System.out.println(key + "=" + value );
@@ -17,8 +18,17 @@ public class Job2SortingInse6620Reducer extends
 		// context.write(key, value);
 		// }
 
-		// context.write(key, value);
-		context.write( new IntWritable(1) ,  new Text("aaa") );
+		if (key.get() > 50) {
+			System.out.println(key);
+			for (Text t : values) {
+				// System.out.print(".");
+				IntWritable i = new IntWritable(key.get() * 10);
+				context.write(t, key);
+			}
+		}
+		// System.out.println();
+		// context.write( i, new Text("aa"));
+		// context.write( new IntWritable(9999) , new Text("aaa") );
 
 	}
 }

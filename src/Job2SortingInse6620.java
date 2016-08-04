@@ -21,7 +21,7 @@ public class Job2SortingInse6620 {
 		job.setJarByClass(Job2SortingInse6620.class);
 		job.setMapperClass(Job2SortingInse6620Mapper.class);
 		// job.setCombinerClass( Inse6620Combinerclass) ;
-		//job.setReducerClass(Job2SortingInse6620Reducer.class); 
+		job.setReducerClass(Job2SortingInse6620Reducer.class); 
 
 		job.setOutputKeyClass(IntWritable.class);
 		job.setOutputValueClass(Text.class);

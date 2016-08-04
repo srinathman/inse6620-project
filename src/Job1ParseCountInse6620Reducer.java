@@ -17,7 +17,7 @@ public class Job1ParseCountInse6620Reducer extends
 			sum += val.get();
 		}
 		result.set(sum);
-
+		
 		context.write(key, result);
 
 	}

@@ -7,7 +7,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
 
-public class Job2SortingInse6620 {
+public class Job22SrcInse6620 {
 
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
@@ -17,11 +17,11 @@ public class Job2SortingInse6620 {
 			System.exit(2);
 		}
 
-		Job job = Job.getInstance(conf, "INSE 6620 Job #2");
-		job.setJarByClass(Job2SortingInse6620.class);
-		job.setMapperClass(Job2SortingInse6620Mapper.class);
+		Job job = Job.getInstance(conf, "INSE 6620 Job #2.2");
+		job.setJarByClass(Job22SrcInse6620.class);
+		job.setMapperClass(Job22SrcInse6620Mapper.class);
 		// job.setCombinerClass( Inse6620Combinerclass) ;
-		job.setReducerClass(Job2SortingInse6620Reducer.class); 
+		job.setReducerClass(Job22SrcInse6620Reducer.class); 
 
 		job.setOutputKeyClass(IntWritable.class);
 		job.setOutputValueClass(Text.class);
